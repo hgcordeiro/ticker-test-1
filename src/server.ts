@@ -1,6 +1,7 @@
 import errorHandler from "errorhandler";
 import app from "./app";
 import { moveMk1 } from "./moveMk1";
+import { moveMk2 } from "./moveMk2";
 import readline from "readline";
 
 if (process.env.NODE_ENV === "development") {
@@ -19,7 +20,7 @@ const server = app.listen(app.get("port"), () => {
     app.get("env")
   );
   console.log("  Press CTRL-C to stop\n");
-  rl.question("\n\nInput Mk1 data (example: \"x,y,BFBFBFLRLRLLLR\"): ", data => {
+  rl.question("\n\nInput movement data (example: \"x,y,BFBFBFLRLRLLLR\"): ", data => {
     const [x, y, path] = data.split(",");
     
     const coordinates = {
@@ -27,8 +28,10 @@ const server = app.listen(app.get("port"), () => {
       y: Number(y) || 0,
     };
 
-    const finalCoordinates = moveMk1(coordinates, path || "");
-    console.log(`🚀 Final coordinates: (${finalCoordinates.x},${finalCoordinates.y})`, );
+    const finalCoordinatesMk1 = moveMk1(coordinates, path || "");
+    const finalCoordinatesMk2 = moveMk2(coordinates, path || "");
+    console.log(`🚀 Final coordinates Mk1: (${finalCoordinatesMk1.x},${finalCoordinatesMk1.y})`, );
+    console.log(`🚀 Final coordinates Mk2: (${finalCoordinatesMk2.x},${finalCoordinatesMk2.y})`, );
     rl.close();
   });
   
