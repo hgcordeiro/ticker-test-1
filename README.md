@@ -1,17 +1,18 @@
 # MK2 - Ticker Technical Test Part 2
 
 Disclaimer: the solution for both Mk models consider robots are facing the positive side of Y axis:
-
+```
 y
 ^
 |  ~ front side here ~
 |     ___
-|    /   \
-|    |___|
+|  .-/   \-.
+|  ||_____||
 |
 |   ~ back side here ~
 |
 -------------------------> x
+```
 
 And that's why you can't see its face here :)
 
