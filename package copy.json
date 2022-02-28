@@ -1,0 +1,54 @@
+{
+    "name": "express-typescript-starter",
+    "version": "0.1.0",
+    "description": "A starting point for Node.js express apps with TypeScript",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Microsoft/TypeScript-Node-Starter"
+    },
+    "author": "Bowden Kelly",
+    "license": "MIT",
+    "scripts": {
+        "dev": "ts-node-dev --transpile-only --no-notify --exit-child src/server.ts",
+        "test": "jest --forceExit --coverage --verbose",
+        "watch-test": "npm run test -- --watchAll"
+    },
+    "dependencies": {
+        "async": "3.2.0",
+        "body-parser": "1.19.0",
+        "errorhandler": "1.5.1",
+        "express": "4.17.1",
+        "express-flash": "0.0.2",
+        "express-session": "1.17.1",
+        "express-validator": "6.9.2",
+        "ts-node-dev": "^1.1.8"
+    },
+    "devDependencies": {
+        "@types/async": "3.2.5",
+        "@types/concurrently": "5.2.1",
+        "@types/errorhandler": "1.5.0",
+        "@types/eslint": "7.2.6",
+        "@types/express": "4.17.11",
+        "@types/express-flash": "0.0.2",
+        "@types/express-session": "1.17.3",
+        "@types/jest": "^26.0.23",
+        "@types/node": "^14.18",
+        "@types/request": "2.48.5",
+        "@types/request-promise": "4.1.47",
+        "@types/shelljs": "0.8.8",
+        "@types/supertest": "2.0.10",
+        "@typescript-eslint/eslint-plugin": "4.14.2",
+        "@typescript-eslint/parser": "4.14.2",
+        "eslint": "7.19.0",
+        "jest": "^27.0.6",
+        "nodemon": "^2.0.7",
+        "shelljs": "0.8.5",
+        "supertest": "6.1.3",
+        "ts-jest": "^27.0.3",
+        "ts-node": "9.1.1",
+        "typescript": "4.1.3"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}
